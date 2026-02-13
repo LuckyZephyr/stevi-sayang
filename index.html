@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk stevi sayangku ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+background:linear-gradient(180deg,#fff5f6,#ffeaea,#f6e6e6);
+color:#4a2c2a;
+scroll-behavior:smooth;
+}
+
+section{
+padding:80px 20px;
+max-width:900px;
+margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:#5e1f2b;
+color:white;
+}
+
+button{
+padding:12px 22px;
+border:none;
+background:#b23a48;
+color:white;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+font-size:15px;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#8c2a37;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-top:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.photo{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.photo:hover{
+transform:scale(1.05);
+}
+
+.photo img{
+width:100%;
+display:block;
+}
+
+.caption{
+padding:10px;
+font-size:14px;
+text-align:center;
+}
+
+.hidden{
+display:none;
+}
+
+footer{
+text-align:center;
+padding:40px;
+font-size:14px;
+opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero show">
+<h1>Hai tepi sayang cinta ku manis ku bubub ku .</h1>
+<p>Happy Valentine's Day! cintaa ku sayangggggggggggggg.</p>
+<button onclick="startJourney()">PENCET BBYY❤️❤️❤️</button>
+</section>
+
+<section>
+<h2>🌙 Awal Ketemu</h2>
+<div class="card">
+<p>Berawal dari kamu mukul warlok dan aku bilang ems patem hahaha jadi ayang akuuu selamanyaaaa.</p>
+</div>
+</section>
+
+<section>
+<h2>📸 INI FOTO AYANG AKU </h2>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="foto1.jpg">
+<div class="caption">INI AYANG PAS NIKAHAN ABANG KAMUUU CANTIK BANGET GAKUWAD</div>
+</div>
+
+<div class="photo">
+<img src="foto2.jpg">
+<div class="caption">WLEKKK😝😝 GEMASS</div>
+</div>
+
+<div class="photo">
+<img src="foto3.jpg">
+<div class="caption">INI LUCU BANGET GAKUAT AYANG SANGAT CANTIK</div>
+</div>
+
+<div class="photo">
+<img src="foto4.jpg">
+<div class="caption">INI DIFOTOIN TEMEN KAMU BAGUS BANGET CANTIKK KAYAK PRINCCES</div>
+</div>
+
+</div>
+</section>
+
+<section id="surpriseTrigger">
+<h2>🤍 Scroll terus BBYY❤️❤️❤️...</h2>
+<div class="card">
+<p>Ada sedikit pesan buat bubub nya aku yang imut lucu cantik iniiiii</p>
+</div>
+</section>
+
+<section id="surprise" class="hidden">
+<h2>🎁 Surprise</h2>
+<div class="card">
+<p>MAKASI YA TEPI SAYANG KU ISTRI KU CINTA KU BUBUBKU SEMUANYA AKU
+    MAAF YAA KALO AKU BANYAK SALAH HEHE TETEP SAMA AKU SELAMANYA YAAA SAYANG,KAMU TU WANITA PALING CANTIK,IMUT MENGGEMAS KAN DI SELURUH ALAM SEMESTA UDAH DI VERIFIKASI OLEH GOOGLE BUHAHAHAY MWAHH AKU SAYANG KAMU DAN POKOK NYA SAYANG KAMU SELAMANYA KITA SELAMANYA BARENG YAAAAAAAAAAAAAAAAAAAAAAAAAAA.</p>
+<p>Happy Valentine ❤️</p>
+</div>
+</section>
+
+<footer>
+Dibuat khusus hanya untuk kamu.
+</footer>
+
+<script>
+function startJourney(){
+window.scrollTo({top:window.innerHeight,behavior:'smooth'});
+}
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const rect=sec.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+sec.classList.add("show");
+}
+});
+
+const trigger=document.getElementById("surpriseTrigger");
+const surprise=document.getElementById("surprise");
+
+if(trigger.getBoundingClientRect().bottom<window.innerHeight){
+surprise.classList.remove("hidden");
+}
+});
+</script>
+
+</body>
+</html>
